@@ -1,12 +1,89 @@
-﻿<Window x:Class="FormulaBineFormata.MainWindow"
+﻿<Controls:MetroWindow x:Class="FormulaBineFormata.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FormulaBineFormata"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="Formula Bine Formata" Height="182.656" Width="525" ResizeMode="CanMinimize" SizeToContent="WidthAndHeight">
+    <Grid Margin="0,0,0,10">
+        <TabControl MaxWidth="520">
+            <TabItem Header="Este propoziție?">
+                <Grid>
+                    <Button Content="¬" HorizontalAlignment="Left" Margin="52,38,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="20" FontWeight="Normal" TextOptions.TextHintingMode="Animated" FontFamily="Comic Sans MS">
+                        <Button.ToolTip>
+                            <ToolTip>
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold">Conector:Negație</TextBlock>
+                                    <TextBlock>¬A este adevărată dacă A este falsă.</TextBlock>
+                                </StackPanel>
+                            </ToolTip>
+                        </Button.ToolTip>
+                    </Button>
+                    <Button Content="∧" HorizontalAlignment="Left" Margin="107,38,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="20" FontWeight="Normal" TextOptions.TextHintingMode="Animated" FontFamily="Comic Sans MS">
+                        <Button.ToolTip>
+                            <ToolTip>
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold">Conector:Conjuncție</TextBlock>
+                                    <TextBlock>A ∧ B este adevărată dacă A și B sunt adevărate.</TextBlock>
+                                </StackPanel>
+                            </ToolTip>
+                        </Button.ToolTip>
+                    </Button>
+                    <Button Content="∨" HorizontalAlignment="Left" Margin="162,38,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="20" FontWeight="Normal" TextOptions.TextHintingMode="Animated" FontFamily="Comic Sans MS">
+                        <Button.ToolTip>
+                            <ToolTip>
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold">Conector:Disjuncție</TextBlock>
+                                    <TextBlock>A ∨ B este adevărată dacă A sau B (sau ambele) sunt adevărate.</TextBlock>
+                                </StackPanel>
+                            </ToolTip>
+                        </Button.ToolTip>
+                    </Button>
+                    <Button Content="→" HorizontalAlignment="Left" Margin="217,38,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="20" FontWeight="Normal" TextOptions.TextHintingMode="Animated" FontFamily="Comic Sans MS">
+                        <Button.ToolTip>
+                            <ToolTip>
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold">Conector:Implicație</TextBlock>
+                                    <TextBlock>A → B este adevărată dacă A este falsă sau B este adevărată.</TextBlock>
+                                </StackPanel>
+                            </ToolTip>
+                        </Button.ToolTip>
+                    </Button>
+                    <Button Content="↔" HorizontalAlignment="Left" Margin="272,38,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="20" FontWeight="Normal" TextOptions.TextHintingMode="Animated" FontFamily="Comic Sans MS">
+                        <Button.ToolTip>
+                            <ToolTip>
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold">Conector:Echivalență</TextBlock>
+                                    <TextBlock>A ↔ B este adevărată dacă A și B sunt false sau A și B sunt adevărate.</TextBlock>
+                                </StackPanel>
+                            </ToolTip>
+                        </Button.ToolTip>
+                    </Button>
+                    <Button Content="(" HorizontalAlignment="Left" Margin="327,38,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="20" FontWeight="Normal" TextOptions.TextHintingMode="Animated" FontFamily="Comic Sans MS">
+                        <Button.ToolTip>
+                            <ToolTip>
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold">Paranteză deschisă</TextBlock>
+                                    <TextBlock>Marchează începutul unei propoziții complexe.</TextBlock>
+                                </StackPanel>
+                            </ToolTip>
+                        </Button.ToolTip>
+                    </Button>
+                    <Button Content=")" HorizontalAlignment="Left" Margin="382,38,0,0" VerticalAlignment="Top" Width="50" Height="50" FontSize="20" FontWeight="Normal" TextOptions.TextHintingMode="Animated" FontFamily="Comic Sans MS">
+                        <Button.ToolTip>
+                            <ToolTip>
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold">Paranteză inchisă</TextBlock>
+                                    <TextBlock>Marchează sfârșitul unei propoziții complexe.</TextBlock>
+                                </StackPanel>
+                            </ToolTip>
+                        </Button.ToolTip>
+                    </Button>
+                    <TextBox x:Name="formula" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="498" TextChanged="Formula_TextChanged" Controls:TextBoxHelper.Watermark="Introduceți o formulă" Controls:TextBoxHelper.HasText="True" FontFamily="Comic Sans MS"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
-</Window>
+</Controls:MetroWindow>
