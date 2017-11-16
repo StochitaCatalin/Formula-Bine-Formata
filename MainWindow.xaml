@@ -81,7 +81,8 @@
                             </ToolTip>
                         </Button.ToolTip>
                     </Button>
-                    <TextBox x:Name="formula" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="498" TextChanged="Formula_TextChanged" Controls:TextBoxHelper.Watermark="Introduceți o formulă" Controls:TextBoxHelper.HasText="True" FontFamily="Comic Sans MS"/>
+                    <TextBox x:Name="formula" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="422" TextChanged="Formula_TextChanged" Controls:TextBoxHelper.Watermark="Introduceți o formulă" Controls:TextBoxHelper.HasText="True" FontFamily="Comic Sans MS"/>
+                    <Button x:Name="aratanoduri" Content="Noduri" HorizontalAlignment="Left" Margin="437,10,0,0" VerticalAlignment="Top" Width="67" Height="26" FontFamily="Comic Sans MS" Click="aratanoduri_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>
